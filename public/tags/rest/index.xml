@@ -9,11 +9,60 @@
     <lastBuildDate>Mon, 17 Nov 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="//localhost:1313/tags/rest/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>REST API - patterns and more</title>
+      <title>REST API - Design Guidelines</title>
       <link>//localhost:1313/posts/rest-api/</link>
       <pubDate>Mon, 17 Nov 2025 00:00:00 +0000</pubDate>
       <guid>//localhost:1313/posts/rest-api/</guid>
-      <description>&lt;p&gt;Tudo o que você precisa saber para começar com Docker em poucos minutos.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Everything you need to know to get started with REST in just a few minutes.&lt;/p&gt;
+&lt;p&gt;REST API is the technology that transformed the way systems communicate with each other.
+It enables applications, websites, servers, and devices to exchange data quickly, securely, and universally — forming the foundation of modern apps, powerful integrations, and digital experiences that work anywhere.&lt;/p&gt;
+&lt;h2 id=&#34;index&#34;&gt;&lt;strong&gt;Index&lt;/strong&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#-what-is-an-api&#34;&gt;What Is an API?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#-what-is-a-rest-api&#34;&gt;What Is a REST API?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#-key-rest-concepts&#34;&gt;Key REST Concepts&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#resources&#34;&gt;Resources&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#main-http-methods&#34;&gt;Main HTTP Methods&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#data-formats&#34;&gt;Data Formats&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#-restful-api-characteristics&#34;&gt;🔧 RESTful API Characteristics&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#1-stateless&#34;&gt;Stateless&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#2-clientserver-architecture&#34;&gt;Client–Server Architecture&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#3-cacheability&#34;&gt;Cacheability&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#4-uniform-interface&#34;&gt;Uniform Interface&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#5-layered-system&#34;&gt;Layered System&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#general-recommendations&#34;&gt;General Recommendations&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#use-plural-nouns-in-urls&#34;&gt;Use Plural Nouns in URLs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#keep-the-base-url-simple-and-intuitive&#34;&gt;Keep the Base URL Simple and Intuitive&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#avoid-verb-based-urls&#34;&gt;Avoid Verb-Based URLs&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#use-http-verbs-to-operate-on-resources&#34;&gt;Use HTTP Verbs to Operate on Resources&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#resource-listing-and-detail-retrieval&#34;&gt;Resource Listing and Detail Retrieval&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#associations&#34;&gt;Associations&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#use-query-parameters-to-reduce-url-complexity&#34;&gt;Use Query Parameters to Reduce URL Complexity&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#error-handling&#34;&gt;Error Handling&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#versioning&#34;&gt;Versioning&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#partial-response&#34;&gt;Partial Response&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#pagination&#34;&gt;Pagination&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#actions-not-involving-resources&#34;&gt;Actions Not Involving Resources&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#multi-format-support&#34;&gt;Multi-Format Support&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#attribute-naming&#34;&gt;Attribute Naming&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#attributes-in-requestresponse-bodies&#34;&gt;Attributes in Request/Response Bodies&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#attributes-in-urls-query-parameters&#34;&gt;Attributes in URLs (Query Parameters)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#attributes-in-headers&#34;&gt;Attributes in Headers&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#references&#34;&gt;References&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;what-is-an-api&#34;&gt;What Is an API?&lt;/h1&gt;
+&lt;p&gt;An &lt;strong&gt;API (Application Programming Interface)&lt;/strong&gt; is a set of standards and protocols that allow different systems or users to interact with an application.&lt;br&gt;
+It enables clients to access the software’s features and services without needing direct access to its internal implementation.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

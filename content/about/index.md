@@ -10,7 +10,7 @@ After years of learning, building, experimenting, I decided to organize everythi
 
 ---
 
-## 🚀 What You’ll Find Here
+## What You’ll Find Here
 
 ### 🧩 Programming
 ### ☁️ Cloud

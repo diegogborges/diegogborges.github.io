@@ -16,6 +16,13 @@
       <description></description>
     </item>
     <item>
+      <title>Backend</title>
+      <link>//localhost:1313/tags/backend/</link>
+      <pubDate>Mon, 17 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/backend/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Rest</title>
       <link>//localhost:1313/tags/rest/</link>
       <pubDate>Mon, 17 Nov 2025 00:00:00 +0000</pubDate>
@@ -23,38 +30,10 @@
       <description></description>
     </item>
     <item>
-      <title>Devops</title>
-      <link>//localhost:1313/tags/devops/</link>
-      <pubDate>Sun, 12 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/devops/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Docker</title>
-      <link>//localhost:1313/tags/docker/</link>
-      <pubDate>Sun, 12 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/docker/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Backend</title>
-      <link>//localhost:1313/tags/backend/</link>
-      <pubDate>Fri, 10 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/backend/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Javascript</title>
-      <link>//localhost:1313/tags/javascript/</link>
-      <pubDate>Fri, 10 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/javascript/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Node</title>
-      <link>//localhost:1313/tags/node/</link>
-      <pubDate>Fri, 10 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>//localhost:1313/tags/node/</guid>
+      <title>Web Development</title>
+      <link>//localhost:1313/tags/web-development/</link>
+      <pubDate>Mon, 17 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/web-development/</guid>
       <description></description>
     </item>
   </channel>

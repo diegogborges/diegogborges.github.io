@@ -16,6 +16,12 @@ params:
     Content: >
       Welcome!!!
       I’m Diego Gomes Borges, a technology enthusiast and software developer who loves building smart, useful solutions. After a lot of studying, practice, and conversations, I decided to bring everything together in one place.
+  assets:
+    favicon: "favicon.ico"
+    favicon16x16: "favicon-16x16.png"
+    favicon32x32: "favicon-32x32.png"
+    apple_touch_icon: "apple-touch-icon.png"
+    safari_pinned_tab: "safari-pinned-tab.svg"
 menus:
   main:
     - name: "Home"
@@ -26,29 +32,4 @@ menus:
       weight: 2
     - name: "Posts"
       url: "/posts/"
-      weight: 10
-
-    - name: "Backend"
-      url: "/categories/backend/"
-      parent: "Posts"
-      weight: 2
-
-    - name: "Frontend"
-      url: "/categories/frontend/"
-      parent: "Posts"
       weight: 3
-
-    - name: "DevOps"
-      url: "/categories/devops/"
-      parent: "Posts"
-      weight: 4
-
-    - name: "Cloud"
-      url: "/categories/cloud/"
-      parent: "Posts"
-      weight: 5
-
-    - name: "Code Challenges"
-      url: "/categories/code-challenges/"
-      parent: "Posts"
-      weight: 6

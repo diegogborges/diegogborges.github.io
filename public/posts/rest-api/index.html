@@ -5,9 +5,58 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
-<title>REST API - patterns and more | ExpDev by Diego - Tech Blog</title>
-<meta name="keywords" content="rest, api">
-<meta name="description" content="Tudo o que você precisa saber para começar com Rest em poucos minutos.">
+<title>REST API - Design Guidelines | ExpDev by Diego - Tech Blog</title>
+<meta name="keywords" content="rest, api, backend, web development">
+<meta name="description" content="Everything you need to know to get started with REST in just a few minutes.
+REST API is the technology that transformed the way systems communicate with each other.
+It enables applications, websites, servers, and devices to exchange data quickly, securely, and universally — forming the foundation of modern apps, powerful integrations, and digital experiences that work anywhere.
+Index
+
+What Is an API?
+What Is a REST API?
+Key REST Concepts
+
+Resources
+Main HTTP Methods
+Data Formats
+
+
+🔧 RESTful API Characteristics
+
+Stateless
+Client–Server Architecture
+Cacheability
+Uniform Interface
+Layered System
+
+
+General Recommendations
+Use Plural Nouns in URLs
+Keep the Base URL Simple and Intuitive
+Avoid Verb-Based URLs
+Use HTTP Verbs to Operate on Resources
+Resource Listing and Detail Retrieval
+Associations
+Use Query Parameters to Reduce URL Complexity
+Error Handling
+Versioning
+Partial Response
+Pagination
+Actions Not Involving Resources
+Multi-Format Support
+Attribute Naming
+
+Attributes in Request/Response Bodies
+Attributes in URLs (Query Parameters)
+Attributes in Headers
+
+
+References
+
+
+What Is an API?
+An API (Application Programming Interface) is a set of standards and protocols that allow different systems or users to interact with an application.
+It enables clients to access the software’s features and services without needing direct access to its internal implementation.">
 <meta name="author" content="">
 <link rel="canonical" href="//localhost:1313/posts/rest-api/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.343cc480b9ffc8f04ccbe5e968ad674880cab773ec19905e93033065c1e7a804.css" integrity="sha256-NDzEgLn/yPBMy&#43;XpaK1nSIDKt3PsGZBekwMwZcHnqAQ=" rel="preload stylesheet" as="style">
@@ -72,8 +121,11 @@
 
 </script><meta property="og:url" content="//localhost:1313/posts/rest-api/">
   <meta property="og:site_name" content="ExpDev by Diego - Tech Blog">
-  <meta property="og:title" content="REST API - patterns and more">
-  <meta property="og:description" content="Tudo o que você precisa saber para começar com Rest em poucos minutos.">
+  <meta property="og:title" content="REST API - Design Guidelines">
+  <meta property="og:description" content="Everything you need to know to get started with REST in just a few minutes.
+REST API is the technology that transformed the way systems communicate with each other. It enables applications, websites, servers, and devices to exchange data quickly, securely, and universally — forming the foundation of modern apps, powerful integrations, and digital experiences that work anywhere.
+Index What Is an API? What Is a REST API? Key REST Concepts Resources Main HTTP Methods Data Formats 🔧 RESTful API Characteristics Stateless Client–Server Architecture Cacheability Uniform Interface Layered System General Recommendations Use Plural Nouns in URLs Keep the Base URL Simple and Intuitive Avoid Verb-Based URLs Use HTTP Verbs to Operate on Resources Resource Listing and Detail Retrieval Associations Use Query Parameters to Reduce URL Complexity Error Handling Versioning Partial Response Pagination Actions Not Involving Resources Multi-Format Support Attribute Naming Attributes in Request/Response Bodies Attributes in URLs (Query Parameters) Attributes in Headers References What Is an API? An API (Application Programming Interface) is a set of standards and protocols that allow different systems or users to interact with an application.
+It enables clients to access the software’s features and services without needing direct access to its internal implementation.">
   <meta property="og:locale" content="en-us">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -81,9 +133,60 @@
     <meta property="article:modified_time" content="2025-11-17T00:00:00+00:00">
     <meta property="article:tag" content="Rest">
     <meta property="article:tag" content="Api">
+    <meta property="article:tag" content="Backend">
+    <meta property="article:tag" content="Web Development">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="REST API - patterns and more">
-<meta name="twitter:description" content="Tudo o que você precisa saber para começar com Rest em poucos minutos.">
+<meta name="twitter:title" content="REST API - Design Guidelines">
+<meta name="twitter:description" content="Everything you need to know to get started with REST in just a few minutes.
+REST API is the technology that transformed the way systems communicate with each other.
+It enables applications, websites, servers, and devices to exchange data quickly, securely, and universally — forming the foundation of modern apps, powerful integrations, and digital experiences that work anywhere.
+Index
+
+What Is an API?
+What Is a REST API?
+Key REST Concepts
+
+Resources
+Main HTTP Methods
+Data Formats
+
+
+🔧 RESTful API Characteristics
+
+Stateless
+Client–Server Architecture
+Cacheability
+Uniform Interface
+Layered System
+
+
+General Recommendations
+Use Plural Nouns in URLs
+Keep the Base URL Simple and Intuitive
+Avoid Verb-Based URLs
+Use HTTP Verbs to Operate on Resources
+Resource Listing and Detail Retrieval
+Associations
+Use Query Parameters to Reduce URL Complexity
+Error Handling
+Versioning
+Partial Response
+Pagination
+Actions Not Involving Resources
+Multi-Format Support
+Attribute Naming
+
+Attributes in Request/Response Bodies
+Attributes in URLs (Query Parameters)
+Attributes in Headers
+
+
+References
+
+
+What Is an API?
+An API (Application Programming Interface) is a set of standards and protocols that allow different systems or users to interact with an application.
+It enables clients to access the software’s features and services without needing direct access to its internal implementation.">
 
 
 <script type="application/ld+json">
@@ -100,7 +203,7 @@
     {
       "@type": "ListItem",
       "position":  2 ,
-      "name": "REST API - patterns and more",
+      "name": "REST API - Design Guidelines",
       "item": "//localhost:1313/posts/rest-api/"
     }
   ]
@@ -110,14 +213,14 @@
 {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "REST API - patterns and more",
-  "name": "REST API - patterns and more",
-  "description": "Tudo o que você precisa saber para começar com Rest em poucos minutos.\n",
+  "headline": "REST API - Design Guidelines",
+  "name": "REST API - Design Guidelines",
+  "description": "Everything you need to know to get started with REST in just a few minutes.\nREST API is the technology that transformed the way systems communicate with each other. It enables applications, websites, servers, and devices to exchange data quickly, securely, and universally — forming the foundation of modern apps, powerful integrations, and digital experiences that work anywhere.\nIndex What Is an API? What Is a REST API? Key REST Concepts Resources Main HTTP Methods Data Formats 🔧 RESTful API Characteristics Stateless Client–Server Architecture Cacheability Uniform Interface Layered System General Recommendations Use Plural Nouns in URLs Keep the Base URL Simple and Intuitive Avoid Verb-Based URLs Use HTTP Verbs to Operate on Resources Resource Listing and Detail Retrieval Associations Use Query Parameters to Reduce URL Complexity Error Handling Versioning Partial Response Pagination Actions Not Involving Resources Multi-Format Support Attribute Naming Attributes in Request/Response Bodies Attributes in URLs (Query Parameters) Attributes in Headers References What Is an API? An API (Application Programming Interface) is a set of standards and protocols that allow different systems or users to interact with an application.\nIt enables clients to access the software’s features and services without needing direct access to its internal implementation.\n",
   "keywords": [
-    "rest", "api"
+    "rest", "api", "backend", "web development"
   ],
-  "articleBody": "Tudo o que você precisa saber para começar com Rest em poucos minutos.\n",
-  "wordCount" : "13",
+  "articleBody": "Everything you need to know to get started with REST in just a few minutes.\nREST API is the technology that transformed the way systems communicate with each other. It enables applications, websites, servers, and devices to exchange data quickly, securely, and universally — forming the foundation of modern apps, powerful integrations, and digital experiences that work anywhere.\nIndex What Is an API? What Is a REST API? Key REST Concepts Resources Main HTTP Methods Data Formats 🔧 RESTful API Characteristics Stateless Client–Server Architecture Cacheability Uniform Interface Layered System General Recommendations Use Plural Nouns in URLs Keep the Base URL Simple and Intuitive Avoid Verb-Based URLs Use HTTP Verbs to Operate on Resources Resource Listing and Detail Retrieval Associations Use Query Parameters to Reduce URL Complexity Error Handling Versioning Partial Response Pagination Actions Not Involving Resources Multi-Format Support Attribute Naming Attributes in Request/Response Bodies Attributes in URLs (Query Parameters) Attributes in Headers References What Is an API? An API (Application Programming Interface) is a set of standards and protocols that allow different systems or users to interact with an application.\nIt enables clients to access the software’s features and services without needing direct access to its internal implementation.\nWhat Is a REST API? A REST API (Representational State Transfer API) is an interface that enables communication between systems over the web following REST architectural principles.\nREST APIs use the HTTP protocol and rely on standardized resource-oriented operations.\nKey REST Concepts Resources Resources are the entities exposed by the API—for example, users, products, or orders.\nEach resource is accessed through a unique URL (Uniform Resource Identifier).\nMain HTTP Methods Method Purpose GET Retrieve information about a resource POST Create a new resource PUT Update an existing resource or create it if it does not exist DELETE Remove a resource PATCH Partially modify an existing resource Data Formats REST APIs typically exchange data using:\nJSON (JavaScript Object Notation) – lightweight, simple, widely adopted XML (eXtensible Markup Language) – less common today but still supported 🔧 RESTful API Characteristics 1. Stateless Each request must contain all the information necessary for the server to process it.\nThe server does not store client state between requests.\n2. Client–Server Architecture REST separates:\nClient – responsible for the user interface Server – responsible for data and logic Resources – the objects exchanged between them Communication happens entirely through HTTP.\n3. Cacheability REST APIs should allow responses to be cached whenever possible.\nThis improves performance and reduces unnecessary network calls.\n4. Uniform Interface A uniform interface makes client and server evolve independently.\nA REST API must provide:\nConsistent URLs Standardized HTTP methods Predictable input/output formats This standardization enables seamless integration between systems.\n5. Layered System A REST architecture may include multiple layers with specific roles:\nSecurity Load balancing Routing Caches Gateways Each layer handles part of the request/response lifecycle, improving scalability and maintainability.\nGeneral Recommendations APIs should be grouped by business entities (e.g., products, branches, orders), and within each entity, you should expose CRUD operations (create, read, update, delete).\nFollow these principles:\nFollow REST specification standards. Translate all path names, fields, parameters, and attribute identifiers into English. Document your API in the development documentation portal, then request publication to production documentation. Create test scenarios (success and failure) for each endpoint. Use Plural Nouns in URLs Always favor plural nouns. Examples:\n/customers A specific resource:\n/customers/1234 Avoid URLs with more than two levels!\nKeep the Base URL Simple and Intuitive Correct Structure: Level 1: A collection representing a business entity Level 2: A specific element inside the collection\nExample:\n/customers /customers/1234 Avoid Verb-Based URLs ❌ Avoid these patterns:\n/getCustomers /saveCustomer /deleteCustomer Use HTTP Verbs to Operate on Resources Resource POST GET PUT DELETE /customers Create List all customers Batch update Delete all customers /customers/1234 ❌ Error Get customer 1234 Update customer (if exists) Delete customer Resource Listing and Detail Retrieval When querying collections, return minimal fields (usually identifiers + summary).\nExample — Collection Query\nGET /employees Response:\n{ \"records\": [ { \"cpf\": \"123456\", \"name\": \"HENRIQUE DA SILVA\" }, { \"cpf\": \"8795531\", \"name\": \"PAULO LEITE JUNIOR\" }, { \"cpf\": \"458314\", \"name\": \"ROBERTO PEREIRA DOS SANTOS\" } ] } Example — Detail Query\nGET /employees/123456 Response:\n{ \"records\": [{ \"cpf\": \"123456\", \"name\": \"HENRIQUE DA SILVA\", \"branch\": 500, \"jobTitle\": \"SOLUTION ARCHITECT SENIOR\", \"startDate\": \"2014-09-15T00:00:00-0300\", \"status\": \"Active\" }] } Associations Retrieve all orders for a customer:\nGET /customers/{id}/orders Create an order for a customer:\nPOST /customers/{id}/orders URLs should rarely exceed 3 levels.\nUse Query Parameters to Reduce URL Complexity Use query params for optional filters:\nExample\nGET /orders?salesbranch=1\u0026status=6\u0026zip=14403597 Error Handling Use a small set of HTTP status codes:\nCode Message Use Case 200 OK Successful operation 204 No Content Success, no payload (e.g., DELETE) 207 Multi-Status Batch operations 400 Bad Request Invalid client request 401 Unauthorized Invalid credentials 404 Not Found Resource not found 500 Internal Server Error Server failure Recommended Error Payload Format { \"developerMessage\": \"Technical details and suggestions for resolving the error.\", \"userMessage\": \"User-friendly explanation.\", \"errorCode\": 99999, \"moreInfo\": \"https://example.com/errors/99999\" } Example — 401 Unauthorized { \"developerMessage\": \"OAuth2 access token not provided\", \"userMessage\": \"Authentication Required\", \"errorCode\": 20003, \"moreInfo\": \"http://developer.example.com/errors/20003\" } Versioning Never publish an API without versioning. Prepend the version with v. The version should appear at the leftmost position: /v1/orders Use simple ordinal numbers (no dots). Keep at least one previous version available. Partial Response Use a fields parameter to return only selected attributes:\n/orders/247571913?fields=total,status,branch Pagination Use limit (number of items) and offset (starting point):\n/orders?limit=25\u0026offset=50 Return 25 records from #51 to #75.\nInclude total record count in metadata.\nActions Not Involving Resources Examples:\nCalculations Translations Conversions These do not involve database resources and should use verbs, not nouns.\nExample — currency conversion:\n/convert?from=EUR\u0026to=USD\u0026amount=100 Document clearly that such endpoints behave differently.\nMulti-Format Support To get XML:\n/orders.xml To get a specific order in XML:\n/orders/1234.xml JSON should remain the default format.\nAttribute Naming Attributes in Request/Response Bodies Use camelCase Avoid snake_case and PascalCase Correct:\n\"startDate\": \"2014-08-06T00:00:00-0300\", \"zipCode\": 14403597 Incorrect:\n\"created_at\": \"...\", \"DateTime\": \"...\" Composite types must be nested objects Correct:\n\"type\": { \"id\": 1, \"description\": \"store\" } Incorrect:\n\"typeId\": 1, \"typeDescription\": \"store\" Attributes in URLs (Query Parameters) Always lowercase Use dot notation for nested fields Correct:\n/v1/prices?branch.id=10\u0026item.product.id=41702 Incorrect:\n/v1/prices?branchId=10\u0026itemProductId=41702 Substring filtering /v1/customers?name_contains=John Value ranges /v1/orders?period_greater=2024-01-01\u0026period_lesser=2024-01-02 Attributes in Headers Do not use special characters Remain concise Correct:\nuuidProtocol Incorrect:\nUUID_Protocol References Mulloy, B. Web API Design - Crafting Interfaces that Developers Love. Apigee. https://pages.apigee.com/web-api-design-ebook-sr-register.html ",
+  "wordCount" : "1062",
   "inLanguage": "en",
   "datePublished": "2025-11-17T00:00:00Z",
   "dateModified": "2025-11-17T00:00:00Z",
@@ -189,13 +292,411 @@
   <header class="post-header">
     
     <h1 class="post-title entry-hint-parent">
-      REST API - patterns and more
+      REST API - Design Guidelines
     </h1>
     <div class="post-meta"><span title='2025-11-17 00:00:00 +0000 UTC'>November 17, 2025</span>
 
 </div>
   </header> 
-  <div class="post-content"><p>Tudo o que você precisa saber para começar com Rest em poucos minutos.</p>
+  <div class="post-content"><p>Everything you need to know to get started with REST in just a few minutes.</p>
+<p>REST API is the technology that transformed the way systems communicate with each other.
+It enables applications, websites, servers, and devices to exchange data quickly, securely, and universally — forming the foundation of modern apps, powerful integrations, and digital experiences that work anywhere.</p>
+<h2 id="index"><strong>Index</strong><a hidden class="anchor" aria-hidden="true" href="#index">#</a></h2>
+<ul>
+<li><a href="#-what-is-an-api">What Is an API?</a></li>
+<li><a href="#-what-is-a-rest-api">What Is a REST API?</a></li>
+<li><a href="#-key-rest-concepts">Key REST Concepts</a>
+<ul>
+<li><a href="#resources">Resources</a></li>
+<li><a href="#main-http-methods">Main HTTP Methods</a></li>
+<li><a href="#data-formats">Data Formats</a></li>
+</ul>
+</li>
+<li><a href="#-restful-api-characteristics">🔧 RESTful API Characteristics</a>
+<ul>
+<li><a href="#1-stateless">Stateless</a></li>
+<li><a href="#2-clientserver-architecture">Client–Server Architecture</a></li>
+<li><a href="#3-cacheability">Cacheability</a></li>
+<li><a href="#4-uniform-interface">Uniform Interface</a></li>
+<li><a href="#5-layered-system">Layered System</a></li>
+</ul>
+</li>
+<li><a href="#general-recommendations">General Recommendations</a></li>
+<li><a href="#use-plural-nouns-in-urls">Use Plural Nouns in URLs</a></li>
+<li><a href="#keep-the-base-url-simple-and-intuitive">Keep the Base URL Simple and Intuitive</a></li>
+<li><a href="#avoid-verb-based-urls">Avoid Verb-Based URLs</a></li>
+<li><a href="#use-http-verbs-to-operate-on-resources">Use HTTP Verbs to Operate on Resources</a></li>
+<li><a href="#resource-listing-and-detail-retrieval">Resource Listing and Detail Retrieval</a></li>
+<li><a href="#associations">Associations</a></li>
+<li><a href="#use-query-parameters-to-reduce-url-complexity">Use Query Parameters to Reduce URL Complexity</a></li>
+<li><a href="#error-handling">Error Handling</a></li>
+<li><a href="#versioning">Versioning</a></li>
+<li><a href="#partial-response">Partial Response</a></li>
+<li><a href="#pagination">Pagination</a></li>
+<li><a href="#actions-not-involving-resources">Actions Not Involving Resources</a></li>
+<li><a href="#multi-format-support">Multi-Format Support</a></li>
+<li><a href="#attribute-naming">Attribute Naming</a>
+<ul>
+<li><a href="#attributes-in-requestresponse-bodies">Attributes in Request/Response Bodies</a></li>
+<li><a href="#attributes-in-urls-query-parameters">Attributes in URLs (Query Parameters)</a></li>
+<li><a href="#attributes-in-headers">Attributes in Headers</a></li>
+</ul>
+</li>
+<li><a href="#references">References</a></li>
+</ul>
+<hr>
+<h1 id="what-is-an-api">What Is an API?<a hidden class="anchor" aria-hidden="true" href="#what-is-an-api">#</a></h1>
+<p>An <strong>API (Application Programming Interface)</strong> is a set of standards and protocols that allow different systems or users to interact with an application.<br>
+It enables clients to access the software’s features and services without needing direct access to its internal implementation.</p>
+<hr>
+<h1 id="what-is-a-rest-api">What Is a REST API?<a hidden class="anchor" aria-hidden="true" href="#what-is-a-rest-api">#</a></h1>
+<p>A <strong>REST API (Representational State Transfer API)</strong> is an interface that enables communication between systems over the web following REST architectural principles.<br>
+REST APIs use the <strong>HTTP protocol</strong> and rely on standardized resource-oriented operations.</p>
+<hr>
+<h1 id="key-rest-concepts">Key REST Concepts<a hidden class="anchor" aria-hidden="true" href="#key-rest-concepts">#</a></h1>
+<h3 id="resources"><strong>Resources</strong><a hidden class="anchor" aria-hidden="true" href="#resources">#</a></h3>
+<p>Resources are the entities exposed by the API—for example, users, products, or orders.<br>
+Each resource is accessed through a unique <strong>URL</strong> (Uniform Resource Identifier).</p>
+<hr>
+<h3 id="main-http-methods"><strong>Main HTTP Methods</strong><a hidden class="anchor" aria-hidden="true" href="#main-http-methods">#</a></h3>
+<table>
+  <thead>
+      <tr>
+          <th>Method</th>
+          <th>Purpose</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>GET</strong></td>
+          <td>Retrieve information about a resource</td>
+      </tr>
+      <tr>
+          <td><strong>POST</strong></td>
+          <td>Create a new resource</td>
+      </tr>
+      <tr>
+          <td><strong>PUT</strong></td>
+          <td>Update an existing resource or create it if it does not exist</td>
+      </tr>
+      <tr>
+          <td><strong>DELETE</strong></td>
+          <td>Remove a resource</td>
+      </tr>
+      <tr>
+          <td><strong>PATCH</strong></td>
+          <td>Partially modify an existing resource</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h3 id="data-formats"><strong>Data Formats</strong><a hidden class="anchor" aria-hidden="true" href="#data-formats">#</a></h3>
+<p>REST APIs typically exchange data using:</p>
+<ul>
+<li><strong>JSON (JavaScript Object Notation)</strong> – lightweight, simple, widely adopted</li>
+<li><strong>XML (eXtensible Markup Language)</strong> – less common today but still supported</li>
+</ul>
+<hr>
+<h1 id="-restful-api-characteristics">🔧 RESTful API Characteristics<a hidden class="anchor" aria-hidden="true" href="#-restful-api-characteristics">#</a></h1>
+<h3 id="1-stateless"><strong>1. Stateless</strong><a hidden class="anchor" aria-hidden="true" href="#1-stateless">#</a></h3>
+<p>Each request must contain all the information necessary for the server to process it.<br>
+The server does <strong>not store client state</strong> between requests.</p>
+<hr>
+<h3 id="2-clientserver-architecture"><strong>2. Client–Server Architecture</strong><a hidden class="anchor" aria-hidden="true" href="#2-clientserver-architecture">#</a></h3>
+<p>REST separates:</p>
+<ul>
+<li><strong>Client</strong> – responsible for the user interface</li>
+<li><strong>Server</strong> – responsible for data and logic</li>
+<li><strong>Resources</strong> – the objects exchanged between them</li>
+</ul>
+<p>Communication happens entirely through <strong>HTTP</strong>.</p>
+<hr>
+<h3 id="3-cacheability"><strong>3. Cacheability</strong><a hidden class="anchor" aria-hidden="true" href="#3-cacheability">#</a></h3>
+<p>REST APIs should allow responses to be <strong>cached</strong> whenever possible.<br>
+This improves performance and reduces unnecessary network calls.</p>
+<hr>
+<h3 id="4-uniform-interface"><strong>4. Uniform Interface</strong><a hidden class="anchor" aria-hidden="true" href="#4-uniform-interface">#</a></h3>
+<p>A uniform interface makes client and server evolve independently.<br>
+A REST API must provide:</p>
+<ul>
+<li>Consistent URLs</li>
+<li>Standardized HTTP methods</li>
+<li>Predictable input/output formats</li>
+</ul>
+<p>This standardization enables seamless integration between systems.</p>
+<hr>
+<h3 id="5-layered-system"><strong>5. Layered System</strong><a hidden class="anchor" aria-hidden="true" href="#5-layered-system">#</a></h3>
+<p>A REST architecture may include multiple layers with specific roles:</p>
+<ul>
+<li>Security</li>
+<li>Load balancing</li>
+<li>Routing</li>
+<li>Caches</li>
+<li>Gateways</li>
+</ul>
+<p>Each layer handles part of the request/response lifecycle, improving scalability and maintainability.</p>
+<h1 id="general-recommendations"><strong>General Recommendations</strong><a hidden class="anchor" aria-hidden="true" href="#general-recommendations">#</a></h1>
+<p>APIs should be grouped by business entities (e.g., products, branches, orders), and within each entity, you should expose CRUD operations (create, read, update, delete).</p>
+<p>Follow these principles:</p>
+<ul>
+<li>Follow REST specification standards.</li>
+<li>Translate all path names, fields, parameters, and attribute identifiers into English.</li>
+<li>Document your API in the development documentation portal, then request publication to production documentation.</li>
+<li>Create test scenarios (success and failure) for each endpoint.</li>
+</ul>
+<hr>
+<h1 id="use-plural-nouns-in-urls"><strong>Use Plural Nouns in URLs</strong><a hidden class="anchor" aria-hidden="true" href="#use-plural-nouns-in-urls">#</a></h1>
+<p>Always favor plural nouns. Examples:</p>
+<pre tabindex="0"><code>/customers
+</code></pre><p>A specific resource:</p>
+<pre tabindex="0"><code>/customers/1234
+</code></pre><blockquote>
+<p><strong>Avoid URLs with more than two levels!</strong></p>
+</blockquote>
+<hr>
+<h1 id="keep-the-base-url-simple-and-intuitive"><strong>Keep the Base URL Simple and Intuitive</strong><a hidden class="anchor" aria-hidden="true" href="#keep-the-base-url-simple-and-intuitive">#</a></h1>
+<h3 id="correct-structure"><strong>Correct Structure:</strong><a hidden class="anchor" aria-hidden="true" href="#correct-structure">#</a></h3>
+<p><strong>Level 1:</strong> A collection representing a business entity
+<strong>Level 2:</strong> A specific element inside the collection</p>
+<p>Example:</p>
+<pre tabindex="0"><code>/customers
+/customers/1234
+</code></pre><hr>
+<h1 id="avoid-verb-based-urls"><strong>Avoid Verb-Based URLs</strong><a hidden class="anchor" aria-hidden="true" href="#avoid-verb-based-urls">#</a></h1>
+<p>❌ <strong>Avoid these patterns:</strong></p>
+<pre tabindex="0"><code>/getCustomers
+/saveCustomer
+/deleteCustomer
+</code></pre><hr>
+<h1 id="use-http-verbs-to-operate-on-resources"><strong>Use HTTP Verbs to Operate on Resources</strong><a hidden class="anchor" aria-hidden="true" href="#use-http-verbs-to-operate-on-resources">#</a></h1>
+<table>
+  <thead>
+      <tr>
+          <th>Resource</th>
+          <th>POST</th>
+          <th>GET</th>
+          <th>PUT</th>
+          <th>DELETE</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>/customers</code></td>
+          <td>Create</td>
+          <td>List all customers</td>
+          <td>Batch update</td>
+          <td>Delete all customers</td>
+      </tr>
+      <tr>
+          <td><code>/customers/1234</code></td>
+          <td>❌ Error</td>
+          <td>Get customer 1234</td>
+          <td>Update customer (if exists)</td>
+          <td>Delete customer</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h1 id="resource-listing-and-detail-retrieval"><strong>Resource Listing and Detail Retrieval</strong><a hidden class="anchor" aria-hidden="true" href="#resource-listing-and-detail-retrieval">#</a></h1>
+<p>When querying collections, return <strong>minimal fields</strong> (usually identifiers + summary).</p>
+<p><strong>Example — Collection Query</strong></p>
+<pre tabindex="0"><code>GET /employees
+</code></pre><p><strong>Response:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;records&#34;</span>: [
+</span></span><span style="display:flex;"><span>    { <span style="color:#f92672">&#34;cpf&#34;</span>: <span style="color:#e6db74">&#34;123456&#34;</span>, <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;HENRIQUE DA SILVA&#34;</span> },
+</span></span><span style="display:flex;"><span>    { <span style="color:#f92672">&#34;cpf&#34;</span>: <span style="color:#e6db74">&#34;8795531&#34;</span>, <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;PAULO LEITE JUNIOR&#34;</span> },
+</span></span><span style="display:flex;"><span>    { <span style="color:#f92672">&#34;cpf&#34;</span>: <span style="color:#e6db74">&#34;458314&#34;</span>, <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;ROBERTO PEREIRA DOS SANTOS&#34;</span> }
+</span></span><span style="display:flex;"><span>  ]
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><hr>
+<p><strong>Example — Detail Query</strong></p>
+<pre tabindex="0"><code>GET /employees/123456
+</code></pre><p><strong>Response:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;records&#34;</span>: [{
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;cpf&#34;</span>: <span style="color:#e6db74">&#34;123456&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;HENRIQUE DA SILVA&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;branch&#34;</span>: <span style="color:#ae81ff">500</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;jobTitle&#34;</span>: <span style="color:#e6db74">&#34;SOLUTION ARCHITECT SENIOR&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;startDate&#34;</span>: <span style="color:#e6db74">&#34;2014-09-15T00:00:00-0300&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;status&#34;</span>: <span style="color:#e6db74">&#34;Active&#34;</span>
+</span></span><span style="display:flex;"><span>  }]
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><hr>
+<h1 id="associations"><strong>Associations</strong><a hidden class="anchor" aria-hidden="true" href="#associations">#</a></h1>
+<p>Retrieve all orders for a customer:</p>
+<pre tabindex="0"><code>GET /customers/{id}/orders
+</code></pre><p>Create an order for a customer:</p>
+<pre tabindex="0"><code>POST /customers/{id}/orders
+</code></pre><blockquote>
+<p>URLs should rarely exceed 3 levels.</p>
+</blockquote>
+<hr>
+<h1 id="use-query-parameters-to-reduce-url-complexity"><strong>Use Query Parameters to Reduce URL Complexity</strong><a hidden class="anchor" aria-hidden="true" href="#use-query-parameters-to-reduce-url-complexity">#</a></h1>
+<p>Use query params for optional filters:</p>
+<p><strong>Example</strong></p>
+<pre tabindex="0"><code>GET /orders?salesbranch=1&amp;status=6&amp;zip=14403597
+</code></pre><hr>
+<h1 id="error-handling"><strong>Error Handling</strong><a hidden class="anchor" aria-hidden="true" href="#error-handling">#</a></h1>
+<p>Use a small set of HTTP status codes:</p>
+<table>
+  <thead>
+      <tr>
+          <th>Code</th>
+          <th>Message</th>
+          <th>Use Case</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>200</td>
+          <td>OK</td>
+          <td>Successful operation</td>
+      </tr>
+      <tr>
+          <td>204</td>
+          <td>No Content</td>
+          <td>Success, no payload (e.g., DELETE)</td>
+      </tr>
+      <tr>
+          <td>207</td>
+          <td>Multi-Status</td>
+          <td>Batch operations</td>
+      </tr>
+      <tr>
+          <td>400</td>
+          <td>Bad Request</td>
+          <td>Invalid client request</td>
+      </tr>
+      <tr>
+          <td>401</td>
+          <td>Unauthorized</td>
+          <td>Invalid credentials</td>
+      </tr>
+      <tr>
+          <td>404</td>
+          <td>Not Found</td>
+          <td>Resource not found</td>
+      </tr>
+      <tr>
+          <td>500</td>
+          <td>Internal Server Error</td>
+          <td>Server failure</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h3 id="recommended-error-payload-format"><strong>Recommended Error Payload Format</strong><a hidden class="anchor" aria-hidden="true" href="#recommended-error-payload-format">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;developerMessage&#34;</span>: <span style="color:#e6db74">&#34;Technical details and suggestions for resolving the error.&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;userMessage&#34;</span>: <span style="color:#e6db74">&#34;User-friendly explanation.&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;errorCode&#34;</span>: <span style="color:#ae81ff">99999</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;moreInfo&#34;</span>: <span style="color:#e6db74">&#34;https://example.com/errors/99999&#34;</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><hr>
+<h3 id="example--401-unauthorized"><strong>Example — 401 Unauthorized</strong><a hidden class="anchor" aria-hidden="true" href="#example--401-unauthorized">#</a></h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;developerMessage&#34;</span>: <span style="color:#e6db74">&#34;OAuth2 access token not provided&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;userMessage&#34;</span>: <span style="color:#e6db74">&#34;Authentication Required&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;errorCode&#34;</span>: <span style="color:#ae81ff">20003</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;moreInfo&#34;</span>: <span style="color:#e6db74">&#34;http://developer.example.com/errors/20003&#34;</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><hr>
+<h1 id="versioning"><strong>Versioning</strong><a hidden class="anchor" aria-hidden="true" href="#versioning">#</a></h1>
+<ul>
+<li>Never publish an API without versioning.</li>
+<li>Prepend the version with <code>v</code>.</li>
+<li>The version should appear at the <strong>leftmost position</strong>:</li>
+</ul>
+<pre tabindex="0"><code>/v1/orders
+</code></pre><ul>
+<li>Use simple ordinal numbers (no dots).</li>
+<li>Keep at least one previous version available.</li>
+</ul>
+<hr>
+<h1 id="partial-response"><strong>Partial Response</strong><a hidden class="anchor" aria-hidden="true" href="#partial-response">#</a></h1>
+<p>Use a <code>fields</code> parameter to return only selected attributes:</p>
+<pre tabindex="0"><code>/orders/247571913?fields=total,status,branch
+</code></pre><hr>
+<h1 id="pagination"><strong>Pagination</strong><a hidden class="anchor" aria-hidden="true" href="#pagination">#</a></h1>
+<p>Use <code>limit</code> (number of items) and <code>offset</code> (starting point):</p>
+<pre tabindex="0"><code>/orders?limit=25&amp;offset=50
+</code></pre><p>Return 25 records from #51 to #75.</p>
+<p>Include total record count in metadata.</p>
+<hr>
+<h1 id="actions-not-involving-resources"><strong>Actions Not Involving Resources</strong><a hidden class="anchor" aria-hidden="true" href="#actions-not-involving-resources">#</a></h1>
+<p>Examples:</p>
+<ul>
+<li>Calculations</li>
+<li>Translations</li>
+<li>Conversions</li>
+</ul>
+<p>These <strong>do not</strong> involve database resources and should use <strong>verbs</strong>, not nouns.</p>
+<p>Example — currency conversion:</p>
+<pre tabindex="0"><code>/convert?from=EUR&amp;to=USD&amp;amount=100
+</code></pre><p>Document clearly that such endpoints behave differently.</p>
+<hr>
+<h1 id="multi-format-support"><strong>Multi-Format Support</strong><a hidden class="anchor" aria-hidden="true" href="#multi-format-support">#</a></h1>
+<p>To get XML:</p>
+<pre tabindex="0"><code>/orders.xml
+</code></pre><p>To get a specific order in XML:</p>
+<pre tabindex="0"><code>/orders/1234.xml
+</code></pre><blockquote>
+<p>JSON should remain the default format.</p>
+</blockquote>
+<hr>
+<h1 id="attribute-naming"><strong>Attribute Naming</strong><a hidden class="anchor" aria-hidden="true" href="#attribute-naming">#</a></h1>
+<h2 id="attributes-in-requestresponse-bodies"><strong>Attributes in Request/Response Bodies</strong><a hidden class="anchor" aria-hidden="true" href="#attributes-in-requestresponse-bodies">#</a></h2>
+<ul>
+<li>Use <strong>camelCase</strong></li>
+<li>Avoid snake_case and PascalCase</li>
+</ul>
+<p><strong>Correct:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#e6db74">&#34;startDate&#34;</span><span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#e6db74">&#34;2014-08-06T00:00:00-0300&#34;</span><span style="color:#960050;background-color:#1e0010">,</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;zipCode&#34;</span><span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#ae81ff">14403597</span>
+</span></span></code></pre></div><p><strong>Incorrect:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#e6db74">&#34;created_at&#34;</span><span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#e6db74">&#34;...&#34;</span><span style="color:#960050;background-color:#1e0010">,</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;DateTime&#34;</span><span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#e6db74">&#34;...&#34;</span>
+</span></span></code></pre></div><h3 id="composite-types-must-be-nested-objects"><strong>Composite types must be nested objects</strong><a hidden class="anchor" aria-hidden="true" href="#composite-types-must-be-nested-objects">#</a></h3>
+<p><strong>Correct:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#e6db74">&#34;type&#34;</span><span style="color:#960050;background-color:#1e0010">:</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;id&#34;</span>: <span style="color:#ae81ff">1</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;description&#34;</span>: <span style="color:#e6db74">&#34;store&#34;</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p><strong>Incorrect:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#e6db74">&#34;typeId&#34;</span><span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#ae81ff">1</span><span style="color:#960050;background-color:#1e0010">,</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;typeDescription&#34;</span><span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#e6db74">&#34;store&#34;</span>
+</span></span></code></pre></div><hr>
+<h2 id="attributes-in-urls-query-parameters"><strong>Attributes in URLs (Query Parameters)</strong><a hidden class="anchor" aria-hidden="true" href="#attributes-in-urls-query-parameters">#</a></h2>
+<ul>
+<li>Always lowercase</li>
+<li>Use dot notation for nested fields</li>
+</ul>
+<p><strong>Correct:</strong></p>
+<pre tabindex="0"><code>/v1/prices?branch.id=10&amp;item.product.id=41702
+</code></pre><p><strong>Incorrect:</strong></p>
+<pre tabindex="0"><code>/v1/prices?branchId=10&amp;itemProductId=41702
+</code></pre><h3 id="substring-filtering"><strong>Substring filtering</strong><a hidden class="anchor" aria-hidden="true" href="#substring-filtering">#</a></h3>
+<pre tabindex="0"><code>/v1/customers?name_contains=John
+</code></pre><h3 id="value-ranges"><strong>Value ranges</strong><a hidden class="anchor" aria-hidden="true" href="#value-ranges">#</a></h3>
+<pre tabindex="0"><code>/v1/orders?period_greater=2024-01-01&amp;period_lesser=2024-01-02
+</code></pre><hr>
+<h2 id="attributes-in-headers"><strong>Attributes in Headers</strong><a hidden class="anchor" aria-hidden="true" href="#attributes-in-headers">#</a></h2>
+<ul>
+<li>Do not use special characters</li>
+<li>Remain concise</li>
+</ul>
+<p><strong>Correct:</strong></p>
+<pre tabindex="0"><code>uuidProtocol
+</code></pre><p><strong>Incorrect:</strong></p>
+<pre tabindex="0"><code>UUID_Protocol
+</code></pre><hr>
+<h1 id="references"><strong>References</strong><a hidden class="anchor" aria-hidden="true" href="#references">#</a></h1>
+<ul>
+<li>Mulloy, B. <em>Web API Design - Crafting Interfaces that Developers Love.</em> Apigee.
+<a href="https://pages.apigee.com/web-api-design-ebook-sr-register.html">https://pages.apigee.com/web-api-design-ebook-sr-register.html</a></li>
+</ul>
 
 
   </div>
@@ -204,6 +705,8 @@
     <ul class="post-tags">
       <li><a href="//localhost:1313/tags/rest/">Rest</a></li>
       <li><a href="//localhost:1313/tags/api/">Api</a></li>
+      <li><a href="//localhost:1313/tags/backend/">Backend</a></li>
+      <li><a href="//localhost:1313/tags/web-development/">Web Development</a></li>
     </ul>
   </footer>
 </article>
