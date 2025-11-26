@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Rest on ExpDev by Diego - Tech Blog</title>
+    <link>//localhost:1313/tags/rest/</link>
+    <description>Recent content in Rest on ExpDev by Diego - Tech Blog</description>
+    <generator>Hugo -- 0.152.2</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 17 Nov 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/rest/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>REST API - patterns and more</title>
+      <link>//localhost:1313/posts/rest-api/</link>
+      <pubDate>Mon, 17 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/rest-api/</guid>
+      <description>&lt;p&gt;Tudo o que você precisa saber para começar com Docker em poucos minutos.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

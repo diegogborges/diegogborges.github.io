@@ -1,18 +1,54 @@
 
-baseURL: "https://example.com/"
+baseURL: "/"
 languageCode: "en-us"
-title: "Meu Site de TI"
+title: "ExpDev by Diego - Tech Blog"
 theme: ["PaperMod"]
 
-module:
-  imports:
-    - path: github.com/adityatelange/hugo-PaperMod
+taxonomies:
+  category: categories
+  tag: tags
 
 params:
   env: production
   defaultTheme: auto
   homeInfoParams:
-    Title: "Olá, eu sou o Diego 👋"
+    Title: "Diego Gomes Borges"
     Content: >
-      Bem-vindo ao meu site pessoal de TI.
-      Aqui compartilho tutoriais, projetos e conteúdos técnicos.
+      Welcome!!!
+      I’m Diego Gomes Borges, a technology enthusiast and software developer who loves building smart, useful solutions. After a lot of studying, practice, and conversations, I decided to bring everything together in one place.
+menus:
+  main:
+    - name: "Home"
+      url: "/"
+      weight: 1
+    - name: "About"
+      url: "/about/"
+      weight: 2
+    - name: "Posts"
+      url: "/posts/"
+      weight: 10
+
+    - name: "Backend"
+      url: "/categories/backend/"
+      parent: "Posts"
+      weight: 2
+
+    - name: "Frontend"
+      url: "/categories/frontend/"
+      parent: "Posts"
+      weight: 3
+
+    - name: "DevOps"
+      url: "/categories/devops/"
+      parent: "Posts"
+      weight: 4
+
+    - name: "Cloud"
+      url: "/categories/cloud/"
+      parent: "Posts"
+      weight: 5
+
+    - name: "Code Challenges"
+      url: "/categories/code-challenges/"
+      parent: "Posts"
+      weight: 6

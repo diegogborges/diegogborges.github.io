@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Node on ExpDev by Diego - Tech Blog</title>
+    <link>//localhost:1313/tags/node/</link>
+    <description>Recent content in Node on ExpDev by Diego - Tech Blog</description>
+    <generator>Hugo -- 0.152.2</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 10 Jan 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/node/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Como criar seu primeiro projeto em Node.js</title>
+      <link>//localhost:1313/posts/node-projeto/</link>
+      <pubDate>Fri, 10 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/posts/node-projeto/</guid>
+      <description>&lt;p&gt;Neste post, você aprenderá a criar seu primeiro projeto Node.js do zero.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
