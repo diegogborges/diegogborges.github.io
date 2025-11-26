@@ -5,4 +5,4 @@ date: 2025-01-12
 tags: ["docker", "devops"]
 ---
 
-Tudo o que você precisa saber para começar com Docker em poucos minutos.
+Tudo o que você precisa saber para começar com Cloud em poucos minutos.
