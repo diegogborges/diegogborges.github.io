@@ -1,308 +1,358 @@
 ---
 title: "System Design"
-date: 2030-11-25T14:28:58-03:00
-draft: true
+date: 2025-12-04T14:28:58-03:00
+draft: false
 ---
 
-System Design: A Complete Guide for Modern Software Architecture
-Table of Contents
+In this article, we explore how System Design goes far beyond diagrams, serving as a practical framework for reasoning, justifying decisions, and building scalable, well-structured systems.
 
-Introduction
+## Table of Contents
+- [System Design](#system-design)
+    - [Introduction](#introduction)
+    - [Understanding the Core Concepts](#understanding-the-core-concepts)
+        - [Introduction to System Design](#introduction-to-system-design)
+    - [What is System Design?](#what-is-system-design)
+    - [Why is System Design Important?](#why-is-system-design-important)
+    - [Working with Approximations](#working-with-approximations)
+    - [Example of System Design Reasoning](#example-of-system-design-reasoning)
+- [System Design in Big Techs](#system-design-in-big-techs)
+    - [Why Big Techs Use System Design in Interviews](#why-big-techs-use-system-design-in-interviews)
+    - [Why Many Candidates Fail](#why-many-candidates-fail)
+    - [The Importance of Deduction and Approximation](#the-importance-of-deduction-and-approximation)
+    - [System Design in the Real World](#system-design-in-the-real-world)
+        - [Why System Design Is Essential in Practice](#why-system-design-is-essential-in-practice)
+        - [Justifications and Trade-offs](#justifications-and-trade-offs)
+- [The Six Elements of System Design](#the-six-elements-of-system-design)
+    - [Introduction](#introduction)
+    - [Six Fundamental Elements of System Design](#six-fundamental-elements-of-system-design)
+        - [1. Requirements Gathering](#1-requirements-gathering)
+        - [2. Capacity Planning](#2-capacity-planning)
+        - [3. Data Modeling](#3-data-modeling)
+        - [4. API Modeling](#4-api-modeling)
+        - [5. Architecture Design](#5-architecture-design)
+        - [6. Exploration & Justification (Trade-offs)](#6-exploration--justification-trade-offs)
+    - [The Value of the Process](#the-value-of-the-process)
+    - [Requirements — Deep Dive](#requirements-—-deep-dive)
+        - [Core Features and Domain](#core-features-and-domain)
+        - [Support Features](#support-features)
+        - [Functional vs Non-Functional Requirements](#functional-vs-non-functional-requirements)
+    - [Next Steps](#next-steps)
 
-1. Scalability
 
-Horizontal vs. Vertical Scaling
+---
 
-Stateless vs. Stateful Services
+# System Design
 
-2. Caching
+## Introduction
 
-Cache Strategies
+In this new module, the focus is on **System Design**, an essential subject for anyone looking to advance in technology and system architecture.
 
-Where to Apply Caching
+Studying System Design helps you explore different possibilities when designing an application, allowing you to evaluate alternatives before finalizing the architecture. It's a practice widely used by Big Tech companies—both in daily work and hiring processes—because it evaluates how a professional thinks, structures ideas, makes technical decisions, and balances trade-offs.
 
-3. Load Balancing
+Throughout this module, the goal is to provide the necessary foundation to understand what System Design is and how to apply it in practice. Over time, this knowledge can expand your technical repertoire and open doors to opportunities in large tech companies.
 
-Load Balancing Algorithms
+The central point is understanding how ideas and calculations connect, resulting in a solid and efficient architecture for your application.
 
-4. Message Queues & Event-Driven Architecture
+---
 
-When to Use Queues
+## Understanding the Core Concepts
 
-Event-Driven Benefits
+### Introduction to System Design
 
-5. Databases & Storage Design
+In this module, we approach System Design in a practical and applied manner. The idea is not only to understand fundamental concepts but also to exercise architectural reasoning through hands-on practice.
 
-Normalization vs. Denormalization
+While some theoretical foundations will be reviewed with the help of slides, the focus remains on real-world scenarios involving architecture and technical decision-making.
 
-Sharding, Replication and Partitioning
+---
 
-6. Consistency Models
+## What is System Design?
 
-Strong vs. Eventual Consistency
+**System Design** is the process of defining the architecture of a system, including:
 
-CAP Theorem
+- components,  
+- modules,  
+- interfaces,  
+- data,  
+- and the interactions between these parts.  
 
-7. API Design
+The objective is to ensure that the specified requirements are met efficiently.
 
-REST vs. gRPC vs. GraphQL
+Many assume System Design is simply “drawing architecture diagrams,” but it goes far beyond that. System Design is a structured process that forces intentional thinking about each decision, evaluating trade-offs and long-term impacts.
 
-8. CDN, Edge Computing & Global Performance
+---
 
-9. Observability
+## Why is System Design Important?
 
-Logs, Metrics, and Traces
+- **Structured thinking:** avoids creating “automatic architectures” based only on reused patterns without reflection.  
+- **Iterative process:** allows exploring multiple alternatives before selecting a final solution.  
+- **Conscious decision-making:** helps identify immediate and long-term implications (costs, performance, maintenance, scalability).  
+- **Exploration of multiple solutions:** the same problem can have several approaches, and System Design helps select the one that best fits the context.  
 
-Alerting & SLO/SLI/SLA
+---
 
-10. Reliability & Resilience
+## Working with Approximations
 
-Circuit Breakers
+System Design is not meant to be extremely detailed or definitive. Often, it relies on approximations to:
 
-Retries, Backoff & Idempotency
+- gain speed,  
+- focus on what truly matters,  
+- objectively compare alternatives.  
 
-11. Security in System Design
+This approximation-based process encourages practical thinking and helps evaluate solutions technically, financially, and in terms of long-term impact.
 
-12. Practical Guidelines
+---
 
-Final Thoughts
+## Example of System Design Reasoning
 
-Introduction
+Imagine your application needs to be extremely fast for specific operations.
 
-System Design is the discipline of architecting software systems that are scalable, resilient, observable, and cost-efficient. It goes far beyond writing code — it’s about making decisions that determine whether your system will withstand real-world load, failures, and growth.
+One solution is to use **in-memory caching**, which provides high performance.
 
-This guide compiles the essential concepts you must understand to design production-grade systems used by millions of users.
+But in-memory cache is expensive. So the question becomes: *is it worth adopting this right now?*
 
-1. Scalability
+Perhaps another strategy could be enough initially, delaying costs without significantly harming performance.
 
-Scalability is the system’s ability to handle increased load without performance degradation.
+This type of analysis—considering alternatives, technical implications, and financial impacts—is exactly what makes System Design essential.
 
-Horizontal vs. Vertical Scaling
+---
 
-Vertical scaling (Scale-Up):
+System Design is not just “architecture drawing,” but a deliberate process of defining a system. It helps plan solutions, explore alternatives, evaluate trade-offs, and prepare applications for both present and future needs.
 
-Add more CPU/RAM to a single machine
+Next, we will explore the relationship between System Design and Big Tech companies, understanding how the process is used in large-scale systems and technical interviews.
 
-Simpler to implement
+# System Design in Big Techs
 
-Limited by hardware
+## Table of Contents
+- [Why Big Techs Use System Design in Interviews](#why-big-techs-use-system-design-in-interviews)
+- [Why Many Candidates Fail](#why-many-candidates-fail)
+- [The Importance of Deduction and Approximation](#the-importance-of-deduction-and-approximation)
+- [System Design in the Real World](#system-design-in-the-real-world)
+  - [Why System Design Is Essential in Practice](#why-system-design-is-essential-in-practice)
+  - [Justifications and Trade-offs](#justifications-and-trade-offs)
 
-Horizontal scaling (Scale-Out):
+---
 
-Add more machines
+## Why Big Techs Use System Design in Interviews
 
-Enables high concurrency
+In the previous lesson, we covered the definition and importance of System Design. Now, let’s dive deeper into a crucial point: **why this practice is so valued by Big Techs during hiring processes.**
 
-Requires stateless architecture
+During a technical interview, it is very common to be asked to solve a System Design exercise. This happens because:
 
-In modern architectures, horizontal scaling is the default strategy.
+- The goal is not the exact final answer, but understanding **how you think**.  
+- Interviewers want to see **how you reached a given solution or number**.  
+- They analyze your **knowledge repertoire** and dive deeper into technologies based on your responses to measure your technical mastery.  
 
-Stateless vs. Stateful Services
+In summary, System Design is used as a tool to evaluate:
 
-Stateless services are easier to scale because any instance can handle any request.
+- Thought process  
+- Deductive ability  
+- Applied technical knowledge  
 
-Stateful services require session affinity, partitions, or distributed storage.
+---
 
-2. Caching
+## Why Many Candidates Fail
 
-Caching reduces latency and offloads databases by keeping frequently accessed data in memory.
+If you had to take a System Design interview today, the chance of not doing well would be high. This happens because:
 
-Cache Strategies
+- System Design follows well-defined techniques and steps (step 1, 2, 3...).  
+- Without this method, candidates tend to just “sketch ideas,” which rarely leads to good results.  
+- Big Techs expect **well-structured thinking**, which requires practice and technique.  
 
-Write-Through
+In this module, you will learn these techniques, making the process easier and increasing your chances of success both in interviews and in your professional work.
 
-Write-Back
+---
 
-Cache-Aside (most common)
+## The Importance of Deduction and Approximation
 
-TTL & Eviction Policies (LRU, LFU, FIFO)
+Another highly valued skill in interviews is the ability to **deduce**.
 
-Where to Apply Caching
+Deduction means simplifying and approximating solutions instead of aiming for absolute precision.
 
-Application-level (Redis, Memcached)
+- Often, a quick and approximate answer is more useful than spending too much time calculating a perfect one.  
+- What matters is demonstrating **how you thought** and the **trade-offs** you considered.  
 
-CDN caching
+This reasoning can — and should — be learned. With practice, your ability to deduce will increase significantly.
 
-Database caching
+---
 
-Client-side caching
+## System Design in the Real World
 
-3. Load Balancing
+So far, we’ve seen how System Design is used in Big Tech interviews. However, it’s essential to highlight that System Design is not only for hiring processes. In real-world work, especially for solution architects, it is an indispensable tool.
 
-Load balancers distribute incoming requests across multiple servers.
+### Why System Design Is Essential in Practice
 
-Load Balancing Algorithms
+#### **1. Organizing Thought**
 
-Round Robin
+- Real systems can be extremely complex.  
+- Explaining everything without structure leads to confusion.  
+- System Design helps express ideas clearly so everyone involved can understand the proposed solution.
 
-Least Connections
+#### **2. Conviction in Decisions**
 
-IP Hash
+- By formalizing System Design, you gain time to reflect on your choices.  
+- This gives you more confidence when presenting solutions.  
+- Similar to TDD (Test-Driven Development), structuring before executing forces you to think better about the problem.
 
-Weighted strategies
+#### **3. Communication and Selling Tool**
 
-Health checks ensure dead nodes stop receiving traffic.
+- System Design is also a way to **sell your solution**.  
+- Whether in meetings with technical teams, clients, or commercial departments, it becomes your main tool for clarity and credibility.  
+- More than diagrams, it involves documented artifacts that justify every decision.
 
-4. Message Queues & Event-Driven Architecture
+---
 
-Queues decouple systems and allow asynchronous communication.
+## Justifications and Trade-offs
 
-When to Use Queues
+A fundamental aspect of System Design is the ability to justify technical choices.
 
-Email delivery
+**Example:**  
+If someone asks, *“Why use Apache Kafka?”*  
+You shouldn’t answer with a generic explanation.
 
-Payment processing
+You need to present trade-offs, compare alternatives, and explain why Kafka is the most suitable option for the system’s context.
 
-Notifications
+Without formalization, your decisions may seem arbitrary or based on guesswork.
 
-Heavy tasks
+---
 
-Event-Driven Benefits
+In the real world, System Design is:
 
-Loose coupling
+- A tool for clarity and expression for solution architects.  
+- A process that strengthens technical conviction.  
+- An efficient communication medium for clients and teams.  
+- A set of documented artifacts that justify decisions and trade-offs, preventing poorly reasoned choices.  
 
-Higher resilience
+# The Six Elements of System Design
 
-Easy horizontal scaling
+## Table of Contents
+- [Introduction](#introduction)
+- [Six Fundamental Elements of System Design](#six-fundamental-elements-of-system-design)
+  - [1. Requirements Gathering](#1-requirements-gathering)
+  - [2. Capacity Planning](#2-capacity-planning)
+  - [3. Data Modeling](#3-data-modeling)
+  - [4. API Modeling](#4-api-modeling)
+  - [5. Architecture Design](#5-architecture-design)
+  - [6. Exploration & Justification (Trade-offs)](#6-exploration--justification-trade-offs)
+- [The Value of the Process](#the-value-of-the-process)
+- [Requirements — Deep Dive](#requirements-—-deep-dive)
+  - [Core Features and Domain](#core-features-and-domain)
+  - [Support Features](#support-features)
+  - [Functional vs Non-Functional Requirements](#functional-vs-non-functional-requirements)
+- [Next Steps](#next-steps)
 
-Replay capability
+---
 
-Common tools: Kafka, RabbitMQ, SQS, Google Pub/Sub
+## Introduction
 
-5. Databases & Storage Design
-Normalization vs. Denormalization
+Many people believe System Design is just about drawing architecture diagrams. That view is limited. Diagrams are only one element of the process — the real value of System Design lies in the set of techniques and methodologies that help structure and justify solutions.
 
-Normalization → integrity
+---
 
-Denormalization → performance
+## Six Fundamental Elements of System Design
 
-Sharding, Replication and Partitioning
+To apply System Design consistently, highlight these six essential steps:
 
-Replication: HA and read scalability
+### 1. Requirements Gathering
+The first step is understanding **why** the system exists.
 
-Sharding: splits data across nodes
+- Developers often receive orders and start coding without questioning requirements.  
+- The architect’s role is to ask the right questions to understand needs, goals, and constraints.
 
-Partitioning: organizes large datasets
+### 2. Capacity Planning
+Estimate the demand the system must handle.
 
-Choose based on:
+Typical questions:
 
-Traffic
+- How many accesses per day?  
+- What is the peak requests per second?  
+- What is the data volume stored per month/year?  
+- What throughput is expected?
 
-Query patterns
+These estimates guide choices for infrastructure, technology, and even programming languages.
 
-Data size
+### 3. Data Modeling
+You don’t need to design the entire database in detail.
 
-Consistency requirements
+- Identify the main entities and their relationships.  
+- Decide which type of database fits best:
+  - Relational  
+  - Key-value  
+  - Document-oriented  
+  - Graph-based
 
-6. Consistency Models
-Strong vs. Eventual Consistency
+### 4. API Modeling
+Define the system’s primary operations — you don’t need to implement every endpoint.
 
-Strong: reads always return the latest value
+- Example: for ticket purchases, an API method might be `purchaseTickets(customer, event, quantity)`.  
+- This modeling helps stakeholders clearly understand what the system does.
 
-Eventual: replicas synchronize over time
+### 5. Architecture Design
+This is when you create diagrams representing:
 
-CAP Theorem
+- Services  
+- Cloud resources  
+- Connections  
+- Main components
 
-You can pick two, never all three:
+Diagrams are important, but they must live within a broader process.
 
-Consistency
+### 6. Exploration & Justification (Trade-offs)
+After the design, evaluate and challenge your choices.
 
-Availability
+Typical questions:
 
-Partition tolerance
+- Why use Kafka instead of another messaging solution?  
+- Why choose Redis over Memcached?
 
-Modern systems favor AP for global scale and CP for critical finance-like systems.
+This exercise prevents automatic decisions based only on conventions or inherited practices. Justifying choices strengthens project clarity and solidity.
 
-7. API Design
+---
 
-Choose API style based on purpose:
+## The Value of the Process
 
-REST vs. gRPC vs. GraphQL
+System Design is not about “building like everyone else.” It exists to remove decisions from autopilot and force the architect to reflect, justify, and explore alternatives.
 
-REST: universal, flexible, slower
+In daily work, this strengthens argumentation in meetings, improves communication with technical and business teams, and ensures proposed solutions are well-founded.
 
-gRPC: super fast, binary, ideal for microservices
+---
 
-GraphQL: client-optimized queries, perfect for mobile
+## Requirements — Deep Dive
 
-8. CDN, Edge Computing & Global Performance
+The first essential element of System Design is requirement definition. Without requirements, you cannot build a consistent system. Requirements represent both the reason the application exists and the features it must provide.
 
-Improve speed and reduce latency by serving data closer to users.
+This is not a return to old waterfall analysis models; requirements are a core part of any modern project.
 
-Tools: Cloudflare, Akamai, Fastly, Fly.io
+### Core Features and Domain
+Start by understanding:
 
-Benefits:
+- **What is the system domain?** → Why does this system exist and what problem does it solve?  
+- **What are the core features?** → What does the system do within this domain?
 
-Lower load on origin servers
+This understanding ties directly to Domain-Driven Design (DDD), where features and models are structured around the business domain.
 
-Faster load times globally
+### Support Features
+Beyond core features, every system needs complementary capabilities that support them.
 
-9. Observability
+- Example: in e-commerce, the core feature is selling products; payment is a **support feature** — an auxiliary capability that enables the primary feature.
 
-Observability ensures you understand what’s happening inside your system.
+### Functional vs Non-Functional Requirements
+- **Functional requirements:** describe actions and behaviors the system must perform (what it should do).  
+- **Non-functional requirements:** set constraints and qualities related to performance, security, scalability, usability, etc. (how it should behave).
 
-Logs, Metrics, and Traces
+---
 
-Logs: what happened
+## Next Steps
 
-Metrics: numerical indicators
+After mapping requirements, the System Design process advances to:
 
-Traces: request journey across services
+- Capacity planning (access counts, transactions, storage needs, etc.)  
+- Data modeling  
+- API modeling  
+- Architecture design  
+- Exploration and validation of the choices made
 
-Alerting & SLO/SLI/SLA
+Understanding requirements is the first step that gives solidity to all subsequent architectural decisions.
 
-Define:
+---
 
-SLI: what you measure
-
-SLO: target
-
-SLA: contractual guarantee
-
-10. Reliability & Resilience
-Circuit Breakers
-
-Prevents cascading failures by stopping calls to unhealthy services.
-
-Retries, Backoff & Idempotency
-
-Retry with exponential backoff
-
-Ensure operations are idempotent to avoid duplicates
-
-11. Security in System Design
-
-Every design must consider:
-
-Authentication & Authorization
-
-Rate limiting
-
-Audit logs
-
-Encryption in transit & at rest
-
-Secret management
-
-Never treat security as optional.
-
-12. Practical Guidelines
-
-Prefer simplicity over premature optimization
-
-“If you don’t measure it, you don’t know it”
-
-Prioritize Critical User Journeys
-
-Involve SRE early
-
-Build observability from day one
-
-Use proven references: Google SRE, DNS RFCs, TCP/IP
-
-Final Thoughts
-
-System design is a continuous learning journey.
-The goal is not just to build systems that work — but to build systems that keep working, even under pressure, failures, or massive growth.
-
-Master these principles, and you'll be prepared to design robust, scalable, and resilient architectures used in real-world production environments.
+Requirements are the foundation. Combined with capacity planning, data modeling, API design, architecture diagrams, and a disciplined trade-off analysis, these six elements form a repeatable, defensible System Design process that produces robust, communicable, and well-justified systems.

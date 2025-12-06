@@ -8,8 +8,17 @@
     <loc>//localhost:1313/posts/</loc>
     <lastmod>2030-11-26T16:02:19-03:00</lastmod>
   </url><url>
+    <loc>//localhost:1313/posts/messaging-comparison/</loc>
+    <lastmod>2025-12-02T17:03:47-03:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/posts/rabbit-mq/</loc>
+    <lastmod>2025-12-02T16:53:48-03:00</lastmod>
+  </url><url>
     <loc>//localhost:1313/posts/microservices-monoliths/</loc>
     <lastmod>2025-11-26T16:02:19-03:00</lastmod>
+  </url><url>
+    <loc>//localhost:1313/posts/system-design/</loc>
+    <lastmod>2025-11-25T14:28:58-03:00</lastmod>
   </url><url>
     <loc>//localhost:1313/tags/api/</loc>
     <lastmod>2025-11-17T00:00:00+00:00</lastmod>

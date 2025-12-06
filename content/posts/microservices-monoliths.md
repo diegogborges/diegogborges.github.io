@@ -1,6 +1,6 @@
 ---
-title: "Microservices Monoliths"
-date: 2025-11-26T16:02:19-03:00
+title: "Microservices vs. Monoliths"
+date: 2025-12-04T16:02:19-03:00
 draft: false
 ---
 

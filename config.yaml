@@ -1,7 +1,7 @@
 
 baseURL: "/"
 languageCode: "en-us"
-title: "ExpDev by Diego - Tech Blog"
+title: "EXPONENTIAL DEV by Diego - Tech Blog"
 theme: ["PaperMod"]
 
 taxonomies:
@@ -9,6 +9,10 @@ taxonomies:
   tag: tags
 
 params:
+  label:
+    text: "EXPONENTIAL DEV by Diego - Tech Blog"
+    icon: "/favicon-32x32.png"
+    iconHeight: 32
   env: production
   defaultTheme: auto
   homeInfoParams:

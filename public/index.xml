@@ -1,15 +1,72 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>ExpDev by Diego - Tech Blog</title>
+    <title>EXPONENTIAL DEV by Diego - Tech Blog</title>
     <link>//localhost:1313/</link>
-    <description>Recent content on ExpDev by Diego - Tech Blog</description>
+    <description>Recent content on EXPONENTIAL DEV by Diego - Tech Blog</description>
     <generator>Hugo -- 0.152.2</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 26 Nov 2025 16:02:19 -0300</lastBuildDate>
+    <lastBuildDate>Tue, 02 Dec 2025 17:03:47 -0300</lastBuildDate>
     <atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Microservices Monoliths</title>
+      <title>Messaging Systems Compared: RabbitMQ vs. Apache Kafka</title>
+      <link>//localhost:1313/posts/messaging-comparison/</link>
+      <pubDate>Tue, 02 Dec 2025 17:03:47 -0300</pubDate>
+      <guid>//localhost:1313/posts/messaging-comparison/</guid>
+      <description>&lt;p&gt;This article provides a clear and concise comparison between RabbitMQ and Apache Kafka to help you choose the most suitable messaging solution for your system architecture.&lt;/p&gt;
+&lt;h2 id=&#34;table-of-contents&#34;&gt;Table of Contents&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#objective&#34;&gt;Objective&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#history&#34;&gt;History&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#rabbitmq&#34;&gt;RabbitMQ&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#apache-kafka&#34;&gt;Apache Kafka&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#solution-features-and-comparisons&#34;&gt;Solution Features and Comparisons&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#rabbitmq-features&#34;&gt;RabbitMQ Features&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#kafka-features&#34;&gt;Kafka Features&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#consumption-strategy-pull-vs-push&#34;&gt;Consumption Strategy (Pull vs Push)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#comparative-use-cases&#34;&gt;Comparative Use Cases&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#deployment&#34;&gt;Deployment&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;objective&#34;&gt;Objective&lt;/h2&gt;
+&lt;p&gt;The objective of this article is to clarify doubts regarding which messaging system is most appropriate when implementing your applications. It analyzes RabbitMQ and Apache Kafka.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Rabbit MQ</title>
+      <link>//localhost:1313/posts/rabbit-mq/</link>
+      <pubDate>Tue, 02 Dec 2025 16:53:48 -0300</pubDate>
+      <guid>//localhost:1313/posts/rabbit-mq/</guid>
+      <description>&lt;p&gt;When you want to develop highly scalable distributed systems in several programming languages and one should communicate with others, it’s necessary an architecture with messaging queue systems and RabbitMq is one of the most used.&lt;/p&gt;
+&lt;h2 id=&#34;table-of-contents&#34;&gt;Table of Contents&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#rabbitmq&#34;&gt;What is Messaging&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#rabbitmq&#34;&gt;RabbitMQ&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#how-rabbitmq-works&#34;&gt;How RabbitMQ Works&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#amqp-protocol&#34;&gt;AMQP Protocol&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#ack&#34;&gt;ACK&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#exchange-and-routing-key&#34;&gt;Exchange and Routing Key&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#fanout&#34;&gt;FANOUT&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#direct&#34;&gt;DIRECT&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#topic&#34;&gt;TOPIC&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#headers&#34;&gt;HEADERS&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#channel&#34;&gt;Channel&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#publishing&#34;&gt;Publishing&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#listener&#34;&gt;Listener&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#stream&#34;&gt;Stream&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;what-is-messaging&#34;&gt;What is Messaging&lt;/h3&gt;
+&lt;p&gt;Messaging is a communication mechanism between systems where one publishes the message and any other as a client receives the same, thus simplifying a lot in the development of distributed systems.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Microservices vs. Monoliths</title>
       <link>//localhost:1313/posts/microservices-monoliths/</link>
       <pubDate>Wed, 26 Nov 2025 16:02:19 -0300</pubDate>
       <guid>//localhost:1313/posts/microservices-monoliths/</guid>
@@ -42,6 +99,71 @@
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;a href=&#34;#what-are-microservices&#34;&gt;What Are Microservices&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>System Design</title>
+      <link>//localhost:1313/posts/system-design/</link>
+      <pubDate>Tue, 25 Nov 2025 14:28:58 -0300</pubDate>
+      <guid>//localhost:1313/posts/system-design/</guid>
+      <description>&lt;p&gt;In this article, we explore how System Design goes far beyond diagrams, serving as a practical framework for reasoning, justifying decisions, and building scalable, well-structured systems.&lt;/p&gt;
+&lt;h2 id=&#34;table-of-contents&#34;&gt;Table of Contents&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#system-design&#34;&gt;System Design&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#introduction&#34;&gt;Introduction&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#understanding-the-core-concepts&#34;&gt;Understanding the Core Concepts&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#introduction-to-system-design&#34;&gt;Introduction to System Design&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#what-is-system-design&#34;&gt;What is System Design?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#why-is-system-design-important&#34;&gt;Why is System Design Important?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#working-with-approximations&#34;&gt;Working with Approximations&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#example-of-system-design-reasoning&#34;&gt;Example of System Design Reasoning&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#system-design-in-big-techs&#34;&gt;System Design in Big Techs&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#why-big-techs-use-system-design-in-interviews&#34;&gt;Why Big Techs Use System Design in Interviews&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#why-many-candidates-fail&#34;&gt;Why Many Candidates Fail&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#the-importance-of-deduction-and-approximation&#34;&gt;The Importance of Deduction and Approximation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#system-design-in-the-real-world&#34;&gt;System Design in the Real World&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#why-system-design-is-essential-in-practice&#34;&gt;Why System Design Is Essential in Practice&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#justifications-and-trade-offs&#34;&gt;Justifications and Trade-offs&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#the-six-elements-of-system-design&#34;&gt;The Six Elements of System Design&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#introduction&#34;&gt;Introduction&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#six-fundamental-elements-of-system-design&#34;&gt;Six Fundamental Elements of System Design&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#1-requirements-gathering&#34;&gt;1. Requirements Gathering&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#2-capacity-planning&#34;&gt;2. Capacity Planning&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#3-data-modeling&#34;&gt;3. Data Modeling&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#4-api-modeling&#34;&gt;4. API Modeling&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#5-architecture-design&#34;&gt;5. Architecture Design&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#6-exploration--justification-trade-offs&#34;&gt;6. Exploration &amp;amp; Justification (Trade-offs)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#the-value-of-the-process&#34;&gt;The Value of the Process&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#requirements-%E2%80%94-deep-dive&#34;&gt;Requirements — Deep Dive&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#core-features-and-domain&#34;&gt;Core Features and Domain&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#support-features&#34;&gt;Support Features&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#functional-vs-non-functional-requirements&#34;&gt;Functional vs Non-Functional Requirements&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#next-steps&#34;&gt;Next Steps&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;system-design&#34;&gt;System Design&lt;/h1&gt;
+&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;In this new module, the focus is on &lt;strong&gt;System Design&lt;/strong&gt;, an essential subject for anyone looking to advance in technology and system architecture.&lt;/p&gt;</description>
     </item>
     <item>
       <title>REST API - Design Guidelines</title>
